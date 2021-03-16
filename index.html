@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <script src="node_modules/js-sha256/build/sha256.min.js"></script>
+    <script src="./mini_backend.js"></script>
+    <!-- <script src="addtasks"></script> -->
+    <script src="overallApp.js"></script>
+    <!-- <script src="backlog.js"></script>
+    <script src="board.js"></script> -->
+    <script src="index.js"></script>
+
+    <title>Join</title>
+
+</head>
+
+<body onload="init();">
+
+    <div class="d-none" id="overlay">
+        <h1 class="login-header">Login erfolgreich</h1>
+        <h2 class="login-text">Viel Spaß beim teamworken!</h2>
+        <img src="img/loginCheck.svg" class="check">
+    </div>
+
+    <div class="main-section" id="main-section">
+        <div class="login-section">
+            <div class="login-mask">
+
+                <div class="header-div">
+                    <h2 class="header">Willkommen auf deiner persönlichen <br> Teamwork Plattform</h2>
+                </div>
+
+                <img class="logo-pic" src="img/logo.png">
+
+                <h1 class="header-logo">JOIN</h1>
+
+                <h1 class="h1">Sign in</h1>
+
+                <div class="inputs">
+                    <input class="inputstyle" id="username" onkeyup="currentUser()" type="text" placeholder="Username">
+                    <input class="inputstyle" id="password" type="password" placeholder="Password">
+                </div>
+
+                <img class="currentUserPic" id="currentUserpic" src="img/user-pic.jpg">
+
+                <button onclick="login()" class="login-btn">Login</button>
+
+                <a href="board.html" class="guest-link">Als Gast nutzen</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

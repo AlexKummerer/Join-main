@@ -1,0 +1,667 @@
+body {
+    margin: 0px; 
+    font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;
+   
+}
+
+/* Overlay for deleting from backlog */
+
+.deleteWindow {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.deleteBtn {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    transition: all ease-in-out 225ms;
+    cursor: pointer;
+}
+
+.deleteBtnRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteh1 {
+    font-family: 'Montserrat', sans-serif !important; 
+    font-size: 30;
+}
+
+.d-none {
+    display: none;
+}
+
+
+/** Main Stuff*/
+.main-section {
+    display: flex;
+}
+
+.mobilemenu {
+    display: none;
+}
+
+.menu-pic-area {
+    display: none;
+}
+
+
+/* Navigation  */
+.navigation {
+    margin-bottom: -90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(30, 49, 144);
+    width: 17%;
+    height: 100vh;
+}
+
+.logo-picture {
+    width: 50px; 
+    height: 50px; 
+    margin-top: 35px; 
+}
+
+.navigation-bar {
+    display: flex; 
+    flex-direction: column; 
+    line-height: 2.2; 
+    font-size: 17px; 
+    margin-bottom: 10px;
+}
+
+.navigation-bar a {
+    color: white; 
+    text-decoration: none; 
+    transition: all 225ms ease-in-out; 
+    opacity: 0.9;
+}
+
+.navigation-bar a:hover {
+    transform: scale(1.1);
+    font-weight: bold; 
+    opacity: 1; 
+    border-left: solid 4px white; 
+    padding-left: 10px;
+}
+
+.hover-line {
+    padding-left: 10px;
+}
+
+.user-pic {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%; 
+    transition: all 225ms ease-in-out; 
+}
+
+.user-pic:hover {
+    transform: scale(1.2);
+}
+
+.logout-btn {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgb(142,158,232); 
+    width: 80px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6%;
+    color: black;
+    text-decoration: none;
+    transition: all ease-in-out 225ms;
+}
+
+.logout-btn:hover {
+    color: white;
+    transition: scale(1.2);
+    font-weight: bold;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+/* Beginn of Backlog Section */
+
+.backlog-overall-section {
+    margin-left: 10px;
+    animation: 1s flyIn ease-out;
+    width: 100%;
+    margin-right: 103px;
+}
+
+/* Main Headings */
+
+.header-backlog {
+    padding: 20px;
+    margin-left: 8px;
+    margin-top: 18px;
+    margin-bottom: 40px;
+}
+
+.title-backlog {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: -10px;
+    margin-left: -9px;
+}
+
+.p-backlog {
+    font-size: 12px;
+    color: rgb(30, 49, 144);
+    margin-left: -7px;
+    margin-bottom: 10;
+    }
+
+.headings-backlog {
+    width: 100%;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -7px;
+    margin-top: 30px;
+    padding-left: 20;
+    color: rgb(30, 49, 144);    
+}
+
+/* Headings for Backlog containter */
+
+.p-headings-assigned {
+    width: 48%;
+    padding-left: 10px;
+}
+
+.p-headings-category {
+    width: 26%;
+}
+
+.p-headings-details {
+    width: 43%;
+}
+
+
+
+/* Delete area */
+
+.delete-pin-bl{
+    height: 72px;
+    width: 30;
+    margin-right: -7px;
+    cursor: pointer;
+}
+
+.delete-backlog {
+    width: 4%;
+
+    margin-right: 10px;
+}
+
+@keyframes flyIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 2;
+        transform: translateY(0px);
+    }
+}
+
+.enclosing-backlog-div {
+    flex-direction: column;
+}
+
+
+/* Grey backlog div */
+
+.backlog-div {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    height: 80px;
+    width: 100%;
+    padding-left: 10px;
+    margin-left: 17px;
+    margin-bottom: 30px;
+    box-shadow:rgba(3, 102, 214, 0.3) 0px 1px 4px;
+}
+
+   
+/* Assigned area */
+
+.assigned-backlog {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.assigned-person {
+    display: flex;
+    align-items: center;
+}
+
+.img-backlog {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 16px;
+}
+
+.img-backlog img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 1px 2px 20px grey;
+}
+
+.name-backlog {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+/* Category area */
+
+.category-backlog {
+    display: flex;
+    width: 26%;
+    align-items: center;
+}
+
+
+/* Details area */
+
+.details-backlog {
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    width: 40%;
+  
+}
+
+.details-text {
+    padding-top: 10px;
+}
+
+
+
+/* Dialog */
+
+.dialog-bg {
+    position: fixed;
+    background-color: #666;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+.dialog {
+    height: 40vh;
+    width: 40vw;
+    background-color: white; 
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 32px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.d-none-details {
+    display: none;
+}
+
+.d-none-text {
+    display: none;
+}
+
+
+/* Responsive Menue */
+
+@media(max-width: 1000px) {
+
+    .mobilemenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: 'Viga', sans-serif;
+        overflow: hidden;
+        height: 0px;
+        width: 70%;
+        transition: all 500ms ease-in-out;
+    }
+
+    .mobilemenu a {
+        display: flex;
+        justify-content: center;
+        padding-top: 20;
+        color: white;
+        text-decoration: none;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .show-mobilemenu {
+        height: 220px;
+        border-top: 1px solid white;
+    }
+
+    .logout-btn {
+        height: 10px;
+        padding-bottom: 15px;
+    }
+    
+    .responsive-menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        background-color: rgb(30, 49, 144);
+    }
+
+    .menu-pic {
+        width: 40px;
+        padding-bottom: 20px;
+        transition: all 225ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .menu-pic:hover {
+        transform: scale(1.2);
+    }
+
+    .logo-pic {        
+        display: flex;
+        margin-right: 450px;
+        height: 45px;
+    }
+
+    .menu-pic-area {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .navigation {
+        display: none;
+     }
+ 
+     .p-headings-assigned {
+        width: 85%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+            width: 61%;
+       }
+
+            .p-headings-details {
+                width: 65%;
+            }
+    .backlog-div {
+        width:105%;
+    }
+
+    .assigned-backlog {
+        width:48%;
+    }
+
+    .category-backlog {
+        width: 34%;
+    }
+
+    .details-backlog {
+        width: 40%;
+    }
+}
+
+@media(max-width: 950px) {
+
+    .p-headings-assigned {
+        width: 39%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+        width: 26%;
+       }
+
+            .p-headings-details {
+                width: 65%;
+            }
+    .backlog-div {
+        width:105%;
+    }
+
+    .assigned-backlog {
+        width:48%;
+    }
+
+    .category-backlog {
+        width: 34%;
+    }
+
+    .details-backlog {
+        width: 40%;
+    }
+    
+}
+
+@media(max-width: 945px){
+
+    .p-headings-assigned {
+        width: 44%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+        width: 26%;
+       }
+
+            .p-headings-details {
+                width: 41%;
+            }
+    
+
+    .assigned-backlog {
+        width:48%;
+    }
+
+    .category-backlog {
+        width: 28%;
+    }
+
+    .details-backlog {
+        width: 49%;
+    }
+
+}
+
+@media (max-width: 610px) {
+    .show-mobilemenu {
+        height: 200px;
+        border-top: 1px solid white;
+        width: 500px;
+    }
+    .p-headings-assigned {
+        width: 85%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+            width: 61%;
+       }
+
+            .p-headings-details {
+                width: 65%;
+            }
+
+
+            .img-backlog {
+                margin-right: 11px;
+                margin-left: 2px;
+                padding-top: 15px;
+            }
+
+            
+    .backlog-div {
+        width:105%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .assigned-backlog {
+        width:48%;
+    }
+
+    .assigned-person {
+        display: block;
+    }
+
+    .category-backlog {
+        width: 34%;
+    }
+
+    .details-backlog {
+        width: 38%;
+    }
+
+    .delete-backlog {
+    width: 4%;
+    margin-right: 15px;
+    padding-top: 14px;
+    padding-right: 10px;
+}
+
+
+    }
+
+   
+
+
+
+@media (max-width: 560px) {
+    .logo-pic {
+        margin-right: 380px;
+        height: 40px;
+    }
+
+    .show-mobilemenu {
+        width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-pic {
+        margin-right: 300px;
+    }
+
+    .show-mobilemenu {
+        width: 350px;
+    }
+
+        .delete-backlog {
+            width: 4%;
+            margin-right: 15px;
+            padding-top: 24px;
+            padding-right: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo-pic {
+        margin-right: 280px;
+    }
+}
+
+@media (max-width: 412px) {
+    .logo-pic {
+        margin-right: 250px;
+    }
+
+    .show-mobilemenu {
+        width: 300px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo-pic {
+        margin-right: 200px;
+    }
+}
+
+@media(max-width: 360px) {
+
+    .title-backlog {
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+
+    .p-backlog {
+        margin-top: 0px;
+    font-size: 17px
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .backlog-div {
+        width: 58%;
+    }
+
+    .name-backlog {
+        display: none;
+    }
+
+    .details-text {
+        display: none;
+    }
+
+
+    .d-none-details {
+        display: block;
+    }
+}
+
+@media (max-width: 321px) {
+    .show-mobilemenu {
+        width: 250px;
+    }
+}
+
+@media (max-width: 281px) {
+    .logo-pic {
+        margin-right: 150px;
+    }
+
+    .show-mobilemenu {
+        width: 200px;
+    }
+}
